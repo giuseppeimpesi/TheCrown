@@ -1,0 +1,12 @@
+main: it.giuseppeimpesi.thecrown.TheCrown
+
+name: TheCrown
+author: zFavourite
+version: 0.1-SNAPSHOT
+softdepend: [PlaceholderAPI]
+
+commands:
+  thecrown:
+    description: Main command
+  crown:
+    description: crown
