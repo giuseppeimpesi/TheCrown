@@ -10,7 +10,6 @@ import org.bukkit.entity.Player;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.List;
 
 @Data
 public class FileManager {
@@ -61,14 +60,14 @@ public class FileManager {
         fileConfiguration.set("participants." + player.getName(), null);
     }
 
-    public boolean isRegistered(Player player) {
-        return fileConfiguration.getConfigurationSection("participants").contains(player.getName());
+    public boolean isRegistered(String str) {
+        return fileConfiguration.getConfigurationSection("participants").contains(str);
     }
 
-    public String getDate(Player player) {
-        if (!isRegistered(player)) return null;
+    public String getDate(String str) {
+        if (!isRegistered(str)) return null;
 
-        return fileConfiguration.getString("participants." + player.getName() + ".date");
+        return fileConfiguration.getString("participants." + str + ".date");
     }
 
 

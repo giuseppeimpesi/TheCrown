@@ -30,7 +30,7 @@ public class LeaveCommand implements SubCommand {
 
     @Override
     public void perform(Player player, String[] args) {
-        if (!manager.getPlayerConfig().isRegistered(player)) {
+        if (!manager.getPlayerConfig().isRegistered(player.getName())) {
             player.sendMessage(Utils.toColor("&6&lTheCrown &7Non sei nella lista dei partecipanti."));
             return;
         }

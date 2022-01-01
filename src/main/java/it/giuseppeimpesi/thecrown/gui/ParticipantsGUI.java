@@ -50,7 +50,7 @@ public class ParticipantsGUI implements Listener {
         SkullMeta meta = (SkullMeta) item.getItemMeta();
         meta.setOwner(s);
         meta.setDisplayName("§8> §b" + s);
-        meta.setLore(Arrays.asList("§7Data iscrizione: §f" + manager.getPlayerConfig().getDate(Bukkit.getPlayer(s))));
+        meta.setLore(Arrays.asList("§7Data iscrizione: §f" + manager.getPlayerConfig().getDate(s), "§7Giocatore: §f" + s));
         item.setItemMeta(meta);
         return item;
     }
